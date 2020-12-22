@@ -11,4 +11,9 @@ public class PurchaseDeptService {
     public PurchaseDeptService(@Qualifier("dresses") InventoryRepository repository) {
         this.repository = repository;
     }
+
+    public String getRepositoryType() {
+        return repository.getClass().getName();
+    }
+
 }
